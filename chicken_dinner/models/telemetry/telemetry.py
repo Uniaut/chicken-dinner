@@ -441,7 +441,7 @@ class Telemetry(object):
 
     def started(self):
         """A timestamp of when the match started."""
-        return self.events[0].timestamp
+        return self.filter_by("log_match_start")[0].timestamp
 
     def killed(self):
         """A list of player names of all killed players this match."""

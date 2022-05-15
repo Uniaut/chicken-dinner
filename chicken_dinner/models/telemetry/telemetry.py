@@ -445,7 +445,7 @@ class Telemetry(object):
 
     def killed(self):
         """A list of player names of all killed players this match."""
-        deaths = self.filter_by("log_player_kill")
+        deaths = self.filter_by("log_player_kill_v2")
         players_killed = []
         for death in deaths:
             players_killed.append(death.victim.name)

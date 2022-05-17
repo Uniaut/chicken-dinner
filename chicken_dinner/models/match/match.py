@@ -13,13 +13,17 @@ class Match(object):
     :param str shard: the shard for this match
     """
 
-    def __init__(self, pubg, match_id, shard=None):
+    def __init__(self, pubg, match_id, shard=None, match_json=None):
         self._pubg = pubg
         self._shard = shard
         #: The match id for this match
         self.match_id = match_id
         #: The API response for this object
-        self.response = self._pubg._core.match(match_id, shard)
+        if match_json is not None:
+            #: The API response associated with this object
+            self.response = match_json
+        else:
+            self.response = self._pubg._core.match(match_id, shard)
         self.roster_to_participant = {}
         self.participant_to_roster = {}
         self._participant_data = {}
@@ -38,6 +42,11 @@ class Match(object):
 
         #: A list of Roster instances for this match
         self.rosters = [Roster(pubg, self, self.response["included"][idx], shard) for idx in rosters_idx]
+
+    @classmethod
+    def from_json(cls, match_json, pubg=None, url=None, shard=None):
+        """Construct an instance of telemetry from the json response."""
+        return cls(pubg, match_json["data"]["id"], shard, match_json)
 
     @property
     def shard(self):

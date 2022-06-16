@@ -59,15 +59,20 @@ map_name_to_map = {
     "Karakin": "Summerland_Main",
 }
 
+_8X8 = [819200, 819200]
+_6X6 = [614400, 614400]
+_4X4 = [409600, 409600]
+_3X3 = [307200, 307200]
+_2X2 = [204800, 204800]
 map_dimensions = {
-    "Desert_Main": [819200, 819200],
-    "Erangel_Main": [819200, 819200],
-    "Baltic_Main": [819200, 819200],
-    "Savage_Main": [409600, 409600],
-    "DihorOtok_Main": [614400, 614400],
-    "Range_Main": [204800, 204800],
-    "Baltic_Main": [819200, 819200],
-    "Summerland_Main": [204800, 204800],
+    "Desert_Main": _8X8,
+    "Erangel_Main": _8X8,
+    "Baltic_Main": _8X8,
+    "DihorOtok_Main": _6X6,
+    "Savage_Main": _4X4,
+    "Chimera_Main": _3X3,
+    "Range_Main": _2X2,
+    "Summerland_Main": _2X2,
 }
 
 true_false = {"false": False, "true": True}

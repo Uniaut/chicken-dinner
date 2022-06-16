@@ -62,6 +62,7 @@ map_name_to_map = {
 map_dimensions = {
     "Desert_Main": [819200, 819200],
     "Erangel_Main": [819200, 819200],
+    "Baltic_Main": [819200, 819200],
     "Savage_Main": [409600, 409600],
     "DihorOtok_Main": [614400, 614400],
     "Range_Main": [204800, 204800],

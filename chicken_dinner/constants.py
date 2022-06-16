@@ -64,15 +64,20 @@ _6X6 = [614400, 614400]
 _4X4 = [409600, 409600]
 _3X3 = [307200, 307200]
 _2X2 = [204800, 204800]
+_1X1 = [102400, 102400]
 map_dimensions = {
     "Desert_Main": _8X8,
     "Erangel_Main": _8X8,
     "Baltic_Main": _8X8,
+    'Taego_Main': _8X8,
     "DihorOtok_Main": _6X6,
     "Savage_Main": _4X4,
     "Chimera_Main": _3X3,
-    "Range_Main": _2X2,
     "Summerland_Main": _2X2,
+    'Range_Main': _2X2,
+    'Summerland_Main': _1X1,
+    'Haven_Main': _1X1,
+    'Heaven_Main': _1X1,
 }
 
 true_false = {"false": False, "true": True}
